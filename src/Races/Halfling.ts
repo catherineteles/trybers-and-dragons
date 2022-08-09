@@ -1,20 +1,20 @@
 import Race from './Race';
 
-class Elf extends Race {
+class Halfling extends Race {
   private _maxLifePoints: number;
-  private static _createdElfs = 0;
+  private static _createdHalflings = 0;
 
   constructor(
     name: string,
     dexterity: number,
   ) {
     super(name, dexterity);
-    this._maxLifePoints = 99;
-    Elf._createdElfs += 1;
+    this._maxLifePoints = 60;
+    Halfling._createdHalflings += 1;
   }
 
   static createdRacesInstances(): number {
-    return this._createdElfs;
+    return this._createdHalflings;
   }
 
   get maxLifePoints(): number {
@@ -22,4 +22,4 @@ class Elf extends Race {
   }
 }
 
-export default Elf;
+export default Halfling;
