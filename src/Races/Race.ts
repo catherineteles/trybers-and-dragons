@@ -1,7 +1,7 @@
 export default abstract class Race {
-  private readonly _name: string;
-  private readonly _dexterity: number;
-  private static _createdRaces: 0;
+  protected readonly _name: string;
+  protected readonly _dexterity: number;
+  protected static _createdRaces: 0;
   
   constructor(
     name: string,
