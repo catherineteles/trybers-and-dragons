@@ -1,7 +1,6 @@
 export default abstract class Race {
   protected readonly _name: string;
   protected readonly _dexterity: number;
-  protected static _createdRaces: 0;
   
   constructor(
     name: string,
@@ -9,7 +8,6 @@ export default abstract class Race {
   ) {
     this._name = name;
     this._dexterity = dexterity;
-    Race._createdRaces += 1;
   }
     
   get name(): string {
@@ -20,7 +18,7 @@ export default abstract class Race {
     return this._dexterity;
   }
     
-  static createdRacesInstances(): number {
+  public static createdRacesInstances(): number {
     throw new Error('Not implemented');
   }
 
